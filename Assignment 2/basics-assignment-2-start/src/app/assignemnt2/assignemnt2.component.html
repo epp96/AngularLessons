@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <hr>
+      <label>UserName</label>
+      <input type="text" class="form-control" [(ngModel)]='userName'>
+      <p>{{userName}}</p>
+      <button
+        type="button"
+        class="btn  btn-primary"
+        [disabled]="userName === ''" <!--I have made a function IsUserNameEmpty but this also works -->
+        (click)="userName = ''">Reset</button> <!--I have made a function resetUserName but this also works -->
+    </div>
+  </div>
+</div>

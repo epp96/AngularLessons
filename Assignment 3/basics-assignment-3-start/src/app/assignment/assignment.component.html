@@ -1,0 +1,10 @@
+<hr>
+<button
+  type="button"
+  class="btn btn-primary"
+  (click)="buttonClick()"
+  >Display Details</button>
+<p *ngIf="buttonClicked">Secret Password = whatever</p>
+<div *ngFor="let times of logs; let i = index"
+  [ngStyle]="{backgroundColor: i >= 4 ? 'blue': 'transparent'}"
+  [ngClass]="{'white-text': i >= 4 }">{{times}}</div>
