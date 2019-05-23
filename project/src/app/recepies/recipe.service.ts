@@ -7,8 +7,8 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 export class RecipeService {
   private recipes: Recepie[] = [
-    new Recepie('chick fil a Sandwitch',
-     'this is a chick fil a Sandwitch',
+    new Recepie('chick fil a Sandwich',
+     'this is a chick fil a Sandwich',
      'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fcdn-image.foodandwine.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2F1519844002%2Ffast-food-mobile-apps-chick-fil-a-FT-BLOG0218.jpg%3Fitok%3D7d_gu0JA&w=800&c=sc&poi=face&q=85',
      [
        new Ingredient('Buns', 2),
@@ -30,6 +30,10 @@ export class RecipeService {
 
   getRecipes() {
     return this.recipes.slice(); // slice with no parameters makes a new array this is bc if we just return the array where it is returned will be able to modify the array in the services class
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]){
